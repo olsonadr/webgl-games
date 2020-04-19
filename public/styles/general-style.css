@@ -1,0 +1,38 @@
+/* Get Variables */
+@import 'vars.css';
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    /* height: 100vh; */
+    color: var(--text);
+    background: var(--bg);
+    transition: background 500ms ease-in-out, color 1000ms ease-in-out;
+    /* display: block; */
+    /* overflow: hidden; */
+    /* padding-bottom: 20px; */
+}
+
+main {
+    padding: 1em;
+}
+
+a {
+    color: currentColor;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.header-image-container * {
+    height: 50px;
+    width: 50px;
+    padding-top: 5px;
+}
+
+.hidden {
+    display: none;
+}

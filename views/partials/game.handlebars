@@ -1,0 +1,43 @@
+
+<div class="webgl-game" id="webgl-game-{{gameTitle}}">
+  <div class="webgl-content" id="webgl-content-{{gameTitle}}">
+    <div class="footer">
+      <div class="webgl-logo"></div>
+      <div class="fullscreen" id="fullscreen-{{gameTitle}}" onclick="fullscreen{{gameTitle}}()"></div>
+      <div class="start-game" id="start-{{gameTitle}}" onclick="start{{gameTitle}}()"></div>
+      <div class="stop-game" id="stop-{{gameTitle}}" onclick="stop{{gameTitle}}()"></div>
+      <div class="game-title">{{gameTitle}}</div>
+    </div>
+    <div class="unityContainer" id="unityContainer{{gameTitle}}" style="width: auto; max-width: 960px; height: 600px;/*width: 100%;*/"></div>
+
+    <script>
+      let unityInstance{{gameTitle}};
+
+      $(document).ready(function() {
+          $('.stop-game').hide();
+          $('#unityContainer{{gameTitle}}').hide();
+          $('#webgl-content-{{gameTitle}}').css("padding-bottom", "0px");
+      });
+
+      var start{{gameTitle}} = function () {
+          unityInstance{{gameTitle}} = UnityLoader.instantiate("unityContainer{{gameTitle}}", "/games/{{gameDirName}}/Build/{{gameTitle}}.json", {onProgress: UnityProgress});
+          $('#start-{{gameTitle}}').hide();
+          $('#stop-{{gameTitle}}').show();
+          $('#unityContainer{{gameTitle}}').show();
+          $('#webgl-content-{{gameTitle}}').css("padding-bottom", "20px");
+      }
+
+      var fullscreen{{gameTitle}} = function () {
+          if (typeof unityInstance{{gameTitle}} !== 'undefined') { unityInstance{{gameTitle}}.SetFullscreen(1) };
+      }
+
+      var stop{{gameTitle}} = function () {
+          if (typeof unityInstance{{gameTitle}} !== 'undefined') { unityInstance{{gameTitle}}.Quit(()=>{ unityInstance{{gameTitle}} = undefined; }) };
+          $('#start-{{gameTitle}}').show();
+          $('#stop-{{gameTitle}}').hide();
+          $('#unityContainer{{gameTitle}}').hide();
+          $('#webgl-content-{{gameTitle}}').css("padding-bottom", "0px");
+      }
+    </script>
+  </div>
+</div>

@@ -1,0 +1,81 @@
+.webgl-content * {border: 0; margin: 0; padding: 0}
+/* .webgl-content {display: block; position: absolute; left: 50%; width: 100%; height: auto; -webkit-transform: translate(-50%, 0); transform: translate(-50%, 0);} */
+.webgl-content {display: block; width: auto;}
+.unityContainer {/*width: 100%;*/ /*height: auto;*/ left: 50%; transform: translate(-50%, 0);}
+
+.webgl-content .logo, .progress {position: absolute; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%);}
+.webgl-content .logo {background: url('/img/webgl/progressLogo.Light.png') no-repeat center / contain; width: 154px; height: 130px;}
+.webgl-content .progress {height: 18px; width: 141px; margin-top: 90px;}
+.webgl-content .progress .empty {background: url('/img/webgl/progressEmpty.Light.png') no-repeat right / cover; float: right; width: 100%; height: 100%; display: inline-block;}
+.webgl-content .progress .full {background: url('/img/webgl/progressFull.Light.png') no-repeat left / cover; float: left; width: 0%; height: 100%; display: inline-block;}
+
+.webgl-content .logo.Dark {background-image: url('/img/webgl/progressLogo.Dark.png');}
+.webgl-content .progress.Dark .empty {background-image: url('/img/webgl/progressEmpty.Dark.png');}
+.webgl-content .progress.Dark .full {background-image: url('/img/webgl/progressFull.Dark.png');}
+
+.webgl-content .footer {margin: 10px 20px 10px 20px; height: 38px; line-height: 38px; font-family: Helvetica, Verdana, Arial, sans-serif; font-size: 18px; /*position: absolute;*/ width: auto;}
+.webgl-content .footer .webgl-logo, .title, .fullscreen {height: 100%; display: inline-block; background: transparent center no-repeat;}
+.webgl-content .footer .webgl-logo {background-image: url('/img/webgl/webgl-logo.png'); width: 204px; float: left;}
+.webgl-content .footer .game-title {float: right;}
+.webgl-content .footer .fullscreen {background-image: url('/img/webgl/fullscreen.png'); width: 38px; float: right; margin-left: 20px; border-radius: 19px; cursor: pointer;}
+
+.webgl-content .footer .start-game, .webgl-content .footer .stop-game { width: 38px; height: 100%; float: right; background: no-repeat; margin-left: 20px; cursor: pointer;}
+.webgl-content .footer .start-game {background-image: url('/img/webgl/start.png'); background-size: 38px;}
+.webgl-content .footer .stop-game  {background-image: url('/img/webgl/stop.png'); background-size: 38px;}
+
+
+.webgl-games-container {
+  position: absolute;
+  display: block;
+  width: 80%;
+  padding: 10px 10px 10px 10px;
+
+  left: 50%;
+  top: 50px;
+
+  /* margin-left: 50vw; */
+  margin-top: 60px;
+  transform: translate(-50%, 0);
+
+  border: 1px solid rgba(27,31,35,.15);
+  border-radius: 10px;
+  /* background-clip: padding-box; */
+  box-shadow: 0 1px 15px rgba(27,31,35,.1);
+}
+
+.webgl-game:first-of-type {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  /* margin-top: 10px; */
+}
+
+.webgl-game:last-of-type {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  /* margin-bottom: 10px; */
+  border: 1px solid #dadada;
+}
+
+.webgl-game {
+  /* display: absolute; */
+  /* left: 0;
+  top: 0; */
+  /* vertical-align: top; */
+  /* height: auto; */
+  width: auto;
+  /* margin: 0 20px 0 20px; */
+  /* margin: 0 10px 0 10px; */
+  /* padding: 0 10px 0 10px; */
+  border: 1px solid #dadada;
+  border-bottom-color: transparent;
+  text-align: center;
+  /* border-radius: 3px; */
+
+  /* display: flex; */
+  /* flex-grow: 1; */
+  /* flex-direction: column; */
+  /* align-items: center; */
+  /* align-items: stretch; */
+
+  position: relative;
+}

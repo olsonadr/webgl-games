@@ -1,0 +1,136 @@
+#game-canvas {
+    border: solid var(--accentcolor) 4px;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-crisp-edges;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    background-color: #3e3e3e;
+    margin: 0;
+    padding: 0;
+    border-top-left-radius: 5px;
+}
+
+#game-container {
+    position: fixed;
+    bottom: 0;
+    right: 20px;
+    width: auto;
+}
+
+#game-info-label {
+    position: absolute;
+    background-color: var(--bg-nav);
+    color: var(--bigtextcolor);
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+    top: 0%;
+    margin-top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#game-banner {
+    display: flex;
+    width: auto;
+    background-color: var(--bg-nav);
+    align-items: stretch;
+    /* align-items: baseline; */
+    height: 40px;
+    flex-direction: row;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 7px;
+}
+
+#game-banner * {
+    border: 1px solid rgba(27, 31, 35, .15);
+    border-radius: 4px;
+    background-clip: padding-box;
+    box-shadow: 0 1px 15px rgba(27, 31, 35, .15);
+}
+
+.game-banner-button {
+    width: 50px;
+    height: 24pt;
+    flex-grow: 1;
+    margin: 0;
+    border: 0;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 14pt;
+}
+
+.game-banner-button:last-child {
+    margin-left: 10px;
+}
+
+#game-score {
+    /* width: 80px; */
+    height: 24pt;
+    /* height: inherit; */
+    margin: 0;
+    /* vertical-align: middle; */
+    margin-right: 20px;
+    flex-grow: 4;
+    background-color: var(--bg);
+    border-radius: 2px;
+    text-align: center;
+    font-size: 20pt;
+}
+
+.collapse-content-background {
+    background-color: var(--bg-nav);
+    padding: 10px 10px 10px 10px;
+    border-top-left-radius: 5px;
+}
+
+.collapse-button-background {
+    background-color: var(--bg-nav);
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(0%, -95%);
+    border-radius: 10px 10px 0 0;
+    padding: 5px;
+    width: 30px;
+    text-align: center;
+}
+
+.collapse-button {
+    /* border-radius: 10px 10px 0 0; */
+}
+
+.chevron::before {
+    border-style: solid;
+    border-width: 0.25em 0.25em 0 0;
+    content: '';
+    display: inline-block;
+    height: 0.45em;
+    /* left: 0.15em; */
+    position: relative;
+    top: 0.15em;
+    transform: rotate(-45deg);
+    /* vertical-align: top; */
+    width: 0.45em;
+}
+
+.chevron.chevron-right:before {
+    left: 0;
+    transform: rotate(45deg);
+}
+
+.chevron.chevron-bottom:before {
+    top: 0;
+    transform: rotate(135deg);
+}
+
+.chevron.chevron-left:before {
+    left: 0.25em;
+    transform: rotate(-135deg);
+}
+
+.hidden {
+    display: none;
+}
