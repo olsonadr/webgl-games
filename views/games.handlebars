@@ -1,0 +1,25 @@
+{{#section "head"}}
+  <!-- Common html head stuff -->
+  {{> common-html-head}}
+
+  <!-- Loaded games html head stuff -->
+  {{#each gameData}}
+    {{> game-html-head}}
+  {{/each}}
+  <link rel="stylesheet" href="/styles/webgl-style.css">
+  <script src="/scripts/webgl/UnityProgress.js"></script>
+{{/section}}
+
+{{> header }}
+
+<main class="content">
+
+  <div class="webgl-games-container">
+    {{#each gameData}}
+      {{> game}}
+    {{/each}}
+  </div>
+
+  {{> init-message-modal }}
+
+</main>

@@ -1,0 +1,35 @@
+<header>
+  <nav class="navbar">
+    <ul class="navbar-nav">
+      <li class="nav-item"><a href="#">Home</a></li>
+      <li class="nav-item"><a href="#">About</a></li>
+
+      <div class="header-image-container">
+        <img src="{{siteLogoSource}}" alt="Logo">
+        {{!-- <h1 class="site-title"><a href="#">siteTitle</a></h1> --}}
+      </div>
+
+      <li class="nav-item has-dropdown">
+        <a href="#">Theme</a>
+
+        <ul class="dropdown">
+          <li class="dropdown-item">
+            <a id="dark" href="#">darken</a>
+          </li>
+          <li class="dropdown-item">
+            <a id="solar" href="#">solarize</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="nav-item"><a href="#">Login</a></li>
+    </ul>
+  </nav>
+
+  <script defer>
+    $('.nav-item a').each(function () {
+      if ($(this).text() === '{{siteTitle}}')
+        $(this).parent().addClass('current-page');
+    });
+  </script>
+</header>
