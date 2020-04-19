@@ -1,0 +1,12 @@
+{
+    "games":  [
+                {   "gameTitle": "MicroRogueLike",
+                    "gameDirName": "MicroRogueLike" },
+
+                {   "gameTitle": "ModdedMicroPlatformer",
+                    "gameDirName": "ModdedMicroPlatformer" },
+
+                {   "gameTitle": "PlatformerKit",
+                    "gameDirName": "PlatformerKit" }
+            ]
+}

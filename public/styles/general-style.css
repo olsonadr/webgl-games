@@ -8,14 +8,20 @@ body {
     /* height: 100vh; */
     color: var(--text);
     background: var(--bg);
-    transition: background 500ms ease-in-out, color 1000ms ease-in-out;
     /* display: block; */
     /* overflow: hidden; */
     /* padding-bottom: 20px; */
 }
 
+body.easeBG {
+    transition: background 500ms ease-in-out, color 1000ms ease-in-out;
+}
+
 main {
-    padding: 1em;
+    /* padding: 1em 3em 1em 3em; */
+    padding: 1em 0 1em 0;
+    margin-left: 50%;
+    transform: translateX(-50%);
 }
 
 a {
@@ -35,4 +41,99 @@ a:hover {
 
 .hidden {
     display: none;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+}
+
+h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+}
+
+
+
+main {
+    background-clip: padding-box;
+    padding: 30px;
+}
+
+/* @media all and (min-width: 800px) {
+    main {
+        width: 800px;
+    }
+} */
+
+@media all and (max-width: 1333px) {
+    main {
+        width: 60%;
+    }
+}
+
+@media all and (min-width: 1333px) {
+    main {
+        width: 800px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+h1 {
+    font-family: Open Sans;
+    font-size: 24px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+    line-height: 26.4px;
+}
+
+h3 {
+    font-family: Open Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+    line-height: 15.4px;
+}
+
+p {
+    font-family: Open Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+blockquote {
+    font-family: Open Sans;
+    font-size: 21px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+pre {
+    font-family: Open Sans;
+    font-size: 13px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 18.5667px;
 }

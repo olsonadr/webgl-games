@@ -26,16 +26,16 @@ module.exports = function(app, context, getDirs) {
     app.get('/games', function(req, res) {
 
         // fill context
-        context.gameData = [];
+        // context.gameData = [];
         context.siteTitle = "All Games";
-        dirsdirs("./public/games", function(dirs) {
-            dirs.forEach(function(dirName) {
-                var data = {};
-                data.gameDirName = dirName;
-                data.gameTitle = dirName;
-                context.gameData.push(data);
-            });
-        });
+        // dirsdirs("./public/games", function(dirs) {
+        //     dirs.forEach(function(dirName) {
+        //         var data = {};
+        //         data.gameDirName = dirName;
+        //         data.gameTitle = dirName;
+        //         context.gameData.push(data);
+        //     });
+        // });
         // console.log(getDirs("../public/games"));
         // getDirs("../public/games/").then(function(dirs) {
         //     dirs.forEach(function(dirName) {
@@ -57,16 +57,17 @@ module.exports = function(app, context, getDirs) {
     app.get(/^\/games\/(.*)/, function(req, res) {
 
         // fill context
-        context.gameData = [];
-        context.siteTitle = req.params[0].slice(0,-1);
+        var copy = context;
+        copy.gameData = [];
+        copy.siteTitle = req.params[0].slice(0,-1);
         var data = {};
         data.gameDirName = req.params[0];
         data.gameTitle = req.params[0].slice(0,-1);
-        context.gameData.push(data);
+        copy.gameData.push(data);
 
         // render
-        res.render('games', context);
-        context.initMessage = "";
+        res.render('games', copy);
+        copy.initMessage = "";
         return;
 
     });

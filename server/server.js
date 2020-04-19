@@ -44,12 +44,7 @@ var indexContext = {
             return (required == 'any') || (mode == required);
         }
     },
-    gameData: [
-        {
-            gameTitle: "Platformer Micro-Game",
-            gameDirName: "Platformer_Kit"
-        }
-    ],
+    gameData: JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'games.json'))).games,//[],
     headerDropdownMenus: [ // dropdown menus in the header element
         // {
         //     id: "links-menu",
