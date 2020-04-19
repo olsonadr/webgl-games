@@ -32,6 +32,12 @@ const port = process.env.PORT || 3000;
 // Default destination on site load
 const defaultDest = "/home";
 
+// Games json path
+const jsonPath = path.join(__dirname, '../games.json');
+
+// Games directory path
+const gamesDir = path.join(publicDir, 'games');
+
 // Handlebars context for html rendering
 var indexContext = {
     helpers: { // handlebars helper functions
@@ -44,7 +50,7 @@ var indexContext = {
             return (required == 'any') || (mode == required);
         }
     },
-    gameData: JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'games.json'))).games,//[],
+    gameData: require(path.join(__dirname, '../utils/detect_games.js'))(fs, gamesDir, jsonPath),//[],
     headerDropdownMenus: [ // dropdown menus in the header element
         // {
         //     id: "links-menu",
