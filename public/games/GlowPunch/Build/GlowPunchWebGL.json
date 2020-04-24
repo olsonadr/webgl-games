@@ -1,0 +1,17 @@
+{
+"companyName": "MyDangCompany",
+"productName": "GlowPunch",
+"productVersion": "0.1",
+"dataUrl": "GlowPunchWebGL.data.unityweb",
+"wasmCodeUrl": "GlowPunchWebGL.wasm.code.unityweb",
+"wasmFrameworkUrl": "GlowPunchWebGL.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"backgroundUrl": "GlowPunchWebGL.jpg",
+"splashScreenStyle": "Dark",
+"backgroundColor": "#FFFFFF",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.3.9f1"
+}
