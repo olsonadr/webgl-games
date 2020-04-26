@@ -57,7 +57,8 @@ module.exports = function(app, context, getDirs) {
     app.get(/^\/games\/(.*)/, function(req, res) {
 
         // fill context
-        var copy = context;
+        var copy = {};
+        Object.assign(copy, context);
         copy.gameData = [];
         copy.siteTitle = req.params[0].slice(0,-1);
         var data = {};
