@@ -31,13 +31,24 @@ header.easeBG {
 
     /* clip-path: polygon(50% 0%, 100% 0, 100% 40%, 50% 100%, 0 40%, 0 0); */
     /* pentagon */
+    clip-path: url("/styles/header-clips.svg#headerBGClip");
+    -webkit-clip-path: url("/styles/header-clips.svg#headerBGClip");
     clip-path: polygon(50% 0%, 100% 0, 100% 70px, 80% 70px, 50% 100%, 20% 70px, 0 70px, 0 0);
+    -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 70px, 80% 70px, 50% 100%, 20% 70px, 0 70px, 0 0);
     /* heptagon */
 
     background: var(--bg-nav);
     /* margin-bottom: 1em; */
 
 }
+
+/* svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+} */
 
 .navbar {
     position: absolute;
@@ -93,7 +104,8 @@ header.easeBG {
 
 .nav-item:last-of-type {
     /* margin-left: 1em; */
-    margin-right: 1.5rem;
+    /* margin-right: 1.5rem; */
+    margin-right: 1rem;
 }
 
 .nav-item a {
@@ -124,7 +136,11 @@ header.easeBG {
     text-decoration: none;
     background-color: rgba(0, 0, 0, .1);
     color: white;
+
+    clip-path: url("/styles/header-clips.svg#headerNavItemClip");
+    -webkit-clip-path: url("/styles/header-clips.svg#headerNavItemClip");
     clip-path: polygon(50% 0%, 95% 0, 100% 65%, 50% 95%, 0 65%, 5% 0);
+    -webkit-clip-path: polygon(50% 0%, 95% 0, 100% 65%, 50% 95%, 0 65%, 5% 0);
 }
 
 .nav-item.has-dropdown.dont-use-dropdown>.dropdown {
@@ -170,7 +186,10 @@ header.easeBG {
     list-style: none;
     pointer-events: none;
 
+    clip-path: url("/styles/header-clips.svg#headerNavItemClip");
+    -webkit-clip-path: url("/styles/header-clips.svg#headerNavItemClip");
     clip-path: polygon(50% 0%, 95% 0, 100% 65%, 50% 100%, 0 65%, 5% 0);
+    -webkit-clip-path: polygon(50% 0%, 95% 0, 100% 65%, 50% 100%, 0 65%, 5% 0);
 }
 
 .has-dropdown:focus-within .dropdown {
@@ -215,13 +234,15 @@ header.easeBG {
 }
 
 
-
-
 .header-image-container {
     width: 10rem;
     height: 10rem;
 
+    clip-path: url("/styles/header-clips.svg#headerImageClip");
+    -webkit-clip-path: url("/styles/header-clips.svg#headerImageClip");
     clip-path: polygon(50% 0%, 95% 0, 100% 65%, 50% 100%, 0 65%, 5% 0);
+    -webkit-clip-path: polygon(50% 0%, 95% 0, 100% 65%, 50% 100%, 0 65%, 5% 0);
+
     background-color: var(--tp-bg);
     padding-left: 1rem;
     padding-right: 1rem;
