@@ -1,0 +1,8 @@
+services:
+  app:
+    image: olsonadr/webgl-games
+    container_name: webgl-games
+    build:
+      context: .
+    ports:
+      - 3000:3000
