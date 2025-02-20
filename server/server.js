@@ -92,7 +92,7 @@ var middleware = require('../middleware/')(fs);
 // Setup Express + Handlebars app engine
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set('view engine', 'handlebars');
-app.engine('handlebars', hb());
+app.engine('handlebars', hb.engine());
 app.enable('trust proxy');
 
 
